@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJ c0mmerce</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="jquery-3.7.0.min.js"></script>
+    <style>
+      .logo {
+        height: 80px;
+        width: 80px;
+        object-fit: contain;
+        padding: 2px;
+        float: left;
+      }
+
+      h1.headin {
+        display: inline;
+        text-align: center;
+        margin-right: 340px;
+        font-size: 80px;
+        color: #f2f2f2;
+      }
+      a.na {
+        color: #f2f2f2;
+        margin-left: 28px;
+        background-color: #333;
+      }
+      a.na:hover {
+        background-color: #f2f2f2;
+        color: #333;
+      }
+      li {
+        font-size: larger;
+        font: bolder;
+        margin: 25px;
+        display: inline;
+      }
+      .heading {
+        background-color: #333;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 0px;
+      }
+      .na {
+        background-color: #333;
+        color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="heading">
+      <img
+        class="logo"
+        src="/shopping-cart-304843_1280.png"
+        alt="Ecommerce Store Logo"
+      />
+      <h1 class="headin">AJ c0mmerce</h1>
+      <nav>
+        <ul>
+          <li><a class="na" href="/AJ_c0mmerce.html">Home</a></li>
+          <li><a class="na" href="/mens.html">Men Wears</a></li>
+          <li><a class="na" href="#Women and Beauty">Women & Beauty</a></li>
+          <li><a class="na" href="#Electronics">Electronics</a></li>
+          <li><a class="na" href="/pay.html">Payment</a></li>
+          <li><a class="na" href="/about_us.html">About Us</a></li>
+          <li><a class="na" href="/login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div style="font-size: xxx-large; font-weight: bolder">Catalogs</div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-1">
+          <button id="backward">&lt;</button>
+        </div>
+        <div class="col-md-10">
+          <img id="bigImage" class="large-img" src="ecom_pic.PNG" alt="Wears" />
+        </div>
+        <div class="col-md-1">
+          <button id="forward">&gt;</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var paused = false;
+      var counter = 1;
+
+      $("#bigImage").click(function () {
+        paused = !paused;
+      });
+
+      function updateImage() {
+        $("#bigImage").attr("src", "ecom_pic" + counter + ".PNG");
+      }
+
+      function updateImageTitle() {
+        var imageTitles = ["Product 1", "Product 2", "Product 3", "Product 4"];
+        $("#imageTitle").text(imageTitles[counter - 1]);
+      }
+
+      updateImage();
+      updateImageTitle();
+
+      $("#forward").click(function () {
+        counter = counter + 1;
+        if (counter > 4) {
+          counter = 1;
+        }
+        updateImage();
+        updateImageTitle();
+      });
+
+      $("#backward").click(function () {
+        counter = counter - 1;
+        if (counter < 1) {
+          counter = 4;
+        }
+        updateImage();
+        updateImageTitle();
+      });
+
+      setInterval(function () {
+        if (!paused) {
+          $("#forward").click();
+        }
+      }, 3000);
+    </script>
+    <footer class="foot">
+      <address>
+        <p>
+          Visit us at:<a class="na" href="#aj_c0mmerce/instragram/"
+            >Instagram</a
+          >
+        </p>
+        <p>
+          Mail:<a class="na" href="mailto:AJ_c0mmerce@hotmail.com"
+            >AJ c0mmerce</a
+          >
+        </p>
+        <p>
+          Contact us: <a class="na" href="tel:+190196417892">(800) 111-4000</a>
+        </p>
+        <p>111 street New York,USA</p>
+        <p>All right reserved 2023 &copy; copyright.</p>
+      </address>
+    </footer>
+  </body>
+</html>

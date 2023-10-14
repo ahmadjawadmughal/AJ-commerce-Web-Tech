@@ -1,0 +1,132 @@
+body{
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.logo {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+    padding: 2px;
+    float: left;
+  }
+  h1.headin{
+    display: inline;
+    margin-left: 340px;
+    font-size: 80px;
+    color: #f2f2f2;
+  }
+  li {
+    font-size: larger;
+    font: bolder;
+    margin: 25px;
+    display: inline;
+  }
+  a.na {
+    background-color: #333;
+    color: #f2f2f2;
+    margin-left: 28px;
+  }
+  a.na:hover {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  .foot {
+    background-color:#333 ;
+    color: #f2f2f2;
+    font-size: larger;
+    padding: 0px;
+    text-align: center;
+  }
+  .new{
+    border: 1px solid lightgray;
+    background-color: #f2f2f2;
+  }
+  .heading{
+    background-color: #333;
+    color:#f2f2f2;
+  }
+  .na{
+    background-color: #333;
+    color:#f2f2f2;
+  }
+  
+  .thin_border{
+    padding-top: 6px;
+  }
+  
+table{
+  margin-left: 22%;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+}
+.log_form {
+  font-size: 90px;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-decoration: underline;
+}
+.inputsizing { 
+  font-size: 50px; 
+}
+.btn{
+  font-size: 40px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+.large-img {
+  width: 100%;
+  position: relative;
+}
+.navigation-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+body{
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+}
+form {
+  margin-top: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input[type="submit"] {
+  background-color: #333;
+  color: #f2f2f2;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
